@@ -5,6 +5,8 @@ const geocode = require("./ultis/geocode");
 const forecast = require("./ultis/forecast");
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 const publicPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const paritalsPath = path.join(__dirname, "../templates/partials");
@@ -53,6 +55,6 @@ app.get("*", (req, res) => {
     res.send("My 404 page");
 });
 
-app.listen("3000", () => {
-    console.log("App is listening at port 3000");
+app.listen(port, () => {
+    console.log(`App is listening at port ${port}`);
 });
