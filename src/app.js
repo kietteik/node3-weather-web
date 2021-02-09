@@ -55,6 +55,7 @@ app.get("*", (req, res) => {
     res.send("My 404 page");
 });
 
+
 app.listen(port, () => {
     console.log(`App is listening at port ${port}`);
 });
